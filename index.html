@@ -102,9 +102,9 @@
 
         // Function to write data to the serial port
         async function writeSerial(data) {
-            //const encoder = new TextEncoder();
-            //await writer.write(encoder.encode(data));
-            await writer.write(data);
+            const encoder = new TextEncoder();
+            await writer.write(encoder.encode(data));
+            //await writer.write(data);
         }
 
         // Listen to terminal input
