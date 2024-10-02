@@ -90,9 +90,9 @@
                         break;
                     }
                     // Convert the data to string and print it to the terminal
-                    const decoder = new TextDecoder();
-                    const data = decoder.decode(value);
-                    terminal.write(data);
+                    //const decoder = new TextDecoder();
+                    //const data = decoder.decode(value);
+                    terminal.write(value);
                 } catch (error) {
                     terminal.writeln('Read error: ' + error);
                     break;
@@ -102,8 +102,9 @@
 
         // Function to write data to the serial port
         async function writeSerial(data) {
-            const encoder = new TextEncoder();
-            await writer.write(encoder.encode(data));
+            //const encoder = new TextEncoder();
+            //await writer.write(encoder.encode(data));
+            await writer.write(data);
         }
 
         // Listen to terminal input
